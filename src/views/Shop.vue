@@ -1,18 +1,20 @@
 <template>
   <Navbar />
-  <HomeBody />
 </template>
 
 <script>
 
 import Navbar from '@/components/Navbar.vue'
-import HomeBody from '@/components/HomeBody.vue'
 
 export default {
-  name: 'Home',
+  name: 'Shop',
   components: {
     Navbar,
-    HomeBody,
   }
 }
 </script>
+
+<style scoped>
+
+
+</style>
