@@ -6,11 +6,7 @@
       <p>
         <span class="brand-span">PENNY JUICE </span>
         is the leader in childcare juice !
-      </p>
-      <h3>
-        Penny Juice Products Comply With All Requirements for CACFP, Subsidy,
-        and Nutrition Set Forth by the FDA
-      </h3>
+      </p><br />
       <p>
         If you're running a childcare center and want to serve healthy beverages
         to kids every day, order quality juice concentrates from Penny Juice of
@@ -18,7 +14,7 @@
         storage and handling requirements. 1 gallon pre-measured mix pitchers
         available to assure cost control and flavor consistency
       </p>
-      <h4 class="rainbow_text_animated">A rainbow of tastes !</h4>
+      <h3 class="rainbow_text_animated">A rainbow of tastes !</h3>
       <p>
         15 flavors available including 7 color free flavors. Each case contains
         6 - ½ gallon bottles of your choice. We’ve designed them especially for
@@ -26,19 +22,22 @@
         with us today!
       </p>
       <div class="btn-placement">
-        <ButtonMore />
+        <router-link to="/about"><ButtonMore BtnName="See more" /></router-link>
       </div>
     </div>
   </div>
+  <HealthSection />
 </template>
 
 <script>
 import ButtonMore from "@/components/ButtonMore.vue";
+import HealthSection from "@/components/HealthSection.vue";
 
 export default {
   name: "HomeBody",
   components: {
     ButtonMore,
+    HealthSection,
   },
 };
 </script>
@@ -59,15 +58,15 @@ export default {
 .slide-txt {
   background-color: rgba(0, 0, 0, 0.75);
   /* border-radius: 0px 20px 20px 0px; */
-  padding: 1%;
+  padding: 2%;
   color: #fff;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   text-align: justify;
   display: none;
-  width: 50%;
-  max-width: 500px;
+  max-width: 600px;
   height: 100%;
+
 
   /* for chrome and safari*/
   -webkit-animation-duration: 1s;
@@ -145,13 +144,6 @@ export default {
   margin-bottom: 10px;
 }
 
-.slide-txt h3 {
-  font-size: 20px;
-  font-style: italic;
-  text-decoration: underline;
-  padding: 10px;
-}
-
 .slide-txt p {
   text-indent: 50px;
   line-height: 1.5;
@@ -201,22 +193,31 @@ export default {
 
 .slide-txt p,
 .slide-txt h2,
-.slide-txt h3 {
+.slide-txt button {
+  opacity: 0;
   /* for chrome and safari*/
-  -webkit-animation-duration: 4s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: 1s;
   -webkit-animation-name: fadein;
+  -webkit-animation-fill-mode: forwards;
 
   /*for firefox*/
-  -moz-animation-duration: 4s;
+  -moz-animation-delay: 1s;
+  -moz-animation-duration: 1s;
   -moz-animation-name: fadein;
+  -moz-animation-fill-mode: forwards;
 
   /* for opera*/
-  -o-animation-duration: 4s;
+  -o-animation-delay: 1s;
+  -o-animation-duration: 1s;
   -o-animation-name: fadein;
+  -o-animation-fill-mode: forwards;
 
   /* Standard syntax*/
-  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-duration: 1s;
   animation-name: fadein;
+  animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes fadein {
@@ -260,6 +261,22 @@ export default {
 
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 769px){
+  .slide-txt {
+    display: block;
+  }
+}
+
+@media (max-width: 600px){
+  .home-body-bg {
+  background-position: center;
+}
+  .slide-txt h2,
+  .slide-txt p{
+    padding: 0 5%;
   }
 }
 

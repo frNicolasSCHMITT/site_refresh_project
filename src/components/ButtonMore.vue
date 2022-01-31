@@ -1,11 +1,14 @@
 <template>
-  <button class="Btn_more">See more</button>
+  <button class="Btn_more">{{ BtnName }}</button>
 </template>
 
 <script>
 
 export default {
   name: "ButtonMore",
+  props: {
+    BtnName: String,
+  }
 };
 
 </script>
@@ -13,27 +16,22 @@ export default {
 <style scoped>
 
 .Btn_more{
-  background: linear-gradient(
-    to right,
-    #6666ff,
-    #0099ff,
-    #00ff00,
-    #ff3399,
-    #6666ff
-  );
-  /* -webkit-background-clip: text;
-  background-clip: text; */
+  background-color: #64B838;
+  border: solid 3px #fff;
   color: #fff;
-  animation: rainbow_animation 5s ease-in-out infinite;
-  background-size: 400% 100%;
   font-size: 30px;
   font-weight: bold;
   text-align: center;
-  text-shadow: none;
   margin: 10px 0;
   padding: 0 5px;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;  
+}
+
+.Btn_more:hover{
+  border: solid 3px rgb(0, 150, 50);
+  color: rgb(0, 150, 50);
+  background-color: #fff;
 }
 
 @keyframes rainbow_animation {
