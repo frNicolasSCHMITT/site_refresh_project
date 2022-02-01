@@ -34,6 +34,10 @@ export default {
   display: flex;
   /* border-bottom: black 1px solid; */
   margin-bottom: 5px;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  background-color: #fff;
 }
 
 .mobile-mode{
@@ -66,7 +70,7 @@ export default {
 #nav a:hover{
   color: #d39609;
   text-decoration: underline;
-  text-underline-offset: 5px;
+  /* text-underline-offset: 5px; */
 }
 
 #nav a.router-link-exact-active {

@@ -13,7 +13,9 @@
         Penny Juice Products Comply With All Requirements for CACFP, Subsidy,
         and Nutrition Set Forth by the FDA
       </h3>
-      <ButtonMore BtnName="See more" />
+      <div class="btn-placement">
+          <router-link to="/shop"><ButtonMore BtnName="See more" /></router-link>
+      </div>
       <div class="home-health-label desktop"></div>
     </div>
   </div>
@@ -74,7 +76,7 @@ export default {
   overflow-y: hidden;
 }
 
-.home-health-txt button{
+.btn-placement{
   margin-left: 200px;
 }
 
@@ -117,9 +119,10 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
     padding: 0 20px;
   }
-  .home-health-txt button{
+  .btn-placement{
     margin-left: 0;
   }
 }

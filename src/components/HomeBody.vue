@@ -51,6 +51,7 @@ export default {
   background-size: cover;
   background-position-y: 50%;
   cursor: help;
+  margin-top: 50px;
 }
 
 /* TEXT SLIDE */
